@@ -96,7 +96,7 @@ public class Main extends JPanel implements KeyListener {
 		frame.getContentPane().add(textArea);
 
 		frame.addKeyListener(this);
-		
+
 		frame.setResizable(false);
 		frame.setVisible(true);
 	}

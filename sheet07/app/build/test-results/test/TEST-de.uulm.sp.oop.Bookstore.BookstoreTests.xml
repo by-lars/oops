@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.uulm.sp.oop.Bookstore.BookstoreTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-06-14T14:04:32" hostname="wsl38" time="0.003">
+  <properties/>
+  <testcase name="addToAssortment" classname="de.uulm.sp.oop.Bookstore.BookstoreTests" time="0.003"/>
+  <testcase name="buyBook" classname="de.uulm.sp.oop.Bookstore.BookstoreTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
