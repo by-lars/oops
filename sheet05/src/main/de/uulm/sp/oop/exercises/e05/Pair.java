@@ -1,4 +1,4 @@
-package main.java.de.uulm.sp.oop.exercises.e05;
+package java.de.uulm.sp.oop.exercises.e05;
 
 /*
  * Aufgabe 1
@@ -17,7 +17,7 @@ package main.java.de.uulm.sp.oop.exercises.e05;
 
 import java.util.Objects;
 
-final class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Comparable<Pair<F,S>>{
+public final class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Comparable<Pair<F,S>>{
     private final F first;
     private final S second;
 
@@ -53,5 +53,10 @@ final class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Co
         int cs = o.second.compareTo(this.second);
 
         return cf != 0 ? cf : cs;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + first + ", " + second + ")";
     }
 }
