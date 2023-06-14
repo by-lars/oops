@@ -1,4 +1,4 @@
-package java.de.uulm.sp.oop.exercises.e05.tests;
+package de.uulm.sp.oop.exercises.e05.tests;
 
 import org.junit.jupiter.api.Test;
 

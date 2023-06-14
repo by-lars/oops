@@ -1,4 +1,4 @@
-package java.de.uulm.sp.oop.exercises.e05;
+package de.uulm.sp.oop.exercises.e05;
 
 /*
  * Aufgabe 1
@@ -17,7 +17,7 @@ package java.de.uulm.sp.oop.exercises.e05;
 
 import java.util.Objects;
 
-public final class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Comparable<Pair<F,S>>{
+public class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Comparable<Pair<F,S>>{
     private final F first;
     private final S second;
 
