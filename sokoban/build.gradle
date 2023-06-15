@@ -1,6 +1,12 @@
 plugins {
-    id 'groovy'
     id 'java'
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(16)
+    }
 }
 
 group 'de.uulm.sp.oop'
@@ -11,7 +17,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.codehaus.groovy:groovy-all:3.0.5'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -19,11 +24,14 @@ test {
     useJUnitPlatform()
 }
 
+application {
+    mainClass = 'de.uulm.sp.oop.sokoban.Main'
+}
+
 jar {
     manifest {
         attributes 'Main-Class': application.mainClass
     }
-
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
