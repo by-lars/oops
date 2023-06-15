@@ -78,6 +78,11 @@ public class Main extends JPanel implements KeyListener {
 		map[9] =  "#.....#".toCharArray();
 		map[10] = "#######".toCharArray();
 
+		ArrayList<String> adasdh = new ArrayList<>(); 
+		
+		int a = 5;
+		int b = 6;
+		Pair<Integer, Integer> pair = new Pair<>(a,b);
 
 
 		frame = new JFrame("Sokoban");

@@ -32,9 +32,10 @@ public class Main {
 	public static void testRemoveVaultValue() {
 		var vault = new Vault<>(0);
 		vault.addStoreableToVault(new Storeable(10));
+		vault.addStoreableToVault(new Storeable(10));
 		vault.addStoreableToVault(new Storeable(20));
 		
-		System.out.println(20 == vault.removeValue(10));
+		System.out.println(30 == vault.removeValue(10));
 	}
 	
 	public static void testremoveValueFromBankVault() {

@@ -11,8 +11,7 @@ public class VaultingManager {
 	final List<Tuple<Bank, List<Vault<IStoreable>>>> banksAndVaults = new LinkedList<>();
 	
 	Tuple<Bank, List<Vault<IStoreable>>> findBankTuple(Bank bankToFind) {
-		//TODO
-		return null;
+		return banksAndVaults.stream().filter(s -> s.first.equals(bankToFind)).findFirst().orElse(null);
 	}
 	
 	/**
@@ -33,10 +32,23 @@ public class VaultingManager {
 		}
 		bankTuple.second.add(vaultToAdd);
 	}
-	
+
 	public boolean removeValueFromBankVault(Bank bankToFind, long vaultID, int valueToRemove) {
-		//TODO
-		return false;
+		var bank = findBankTuple(bankToFind);
+
+		if (bank == null) {
+			return false;
+		}
+
+		var vault = bank.second.stream().filter(s -> s.getID() == vaultID).findFirst();
+
+		if(vault.isEmpty()) {
+			return false;
+		}
+
+		vault.get().removeValue(valueToRemove);
+
+		return true;
 	}
 	
 }
