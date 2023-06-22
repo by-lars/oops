@@ -46,9 +46,10 @@ public class VaultingManager {
 			return false;
 		}
 
-		vault.get().removeValue(valueToRemove);
+		int currentValue = vault.get().getValue();
+		int newValue = vault.get().removeValue(valueToRemove);
 
-		return true;
+		return currentValue != newValue;
 	}
 	
 }
