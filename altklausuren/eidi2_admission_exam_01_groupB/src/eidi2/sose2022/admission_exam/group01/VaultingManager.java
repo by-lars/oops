@@ -47,6 +47,10 @@ public class VaultingManager {
 	
 	public boolean addStoreableToBankVault(long vaultID, IStoreable storeableToAdd) {
 		var vault = findVaultWithID(vaultID);
+
+		if(vault == null)
+			return false;
+
 		return vault.addStoreableToVault(storeableToAdd);
 	}
 }
