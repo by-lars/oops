@@ -1,0 +1,12 @@
+{
+	"members": [
+				{
+					"NAME":"Stefan Götz",
+					"female":false
+				},
+				{
+					"NAME":"Stefanie Götz",
+					"female":true
+				}
+	]
+}
